@@ -22,8 +22,8 @@ import { useSpring, a } from "@react-spring/three";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-const cardGLB = "/assets/images/card.glb";
-const lanyard = "/assets/images/lanyard.png";
+const cardGLB = "assets/images/card.glb";
+const lanyard = "assets/images/lanyard.png";
 
 export default function Lanyard({
   position = [0, 0, 30],

@@ -30,7 +30,7 @@ const stacks = [
   { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg', category: 'Front-End' },
   { name: 'Flutter', icon: 'devicon-flutter-plain colored', category: 'Mobile' },
   { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg', category: 'Languages' },
-  { name: 'Flame Engine', icon: '/assets/images/stacks/flame.png', category: 'Mobile' },
+  { name: 'Flame Engine', icon: 'assets/images/stacks/flame.png', category: 'Mobile' },
   { name: 'Android', icon: 'devicon-android-plain colored', category: 'Mobile' },
   { name: 'Apple', icon: 'devicon-apple-original original', category: 'Mobile' },
   { name: 'Git', icon: 'devicon-git-plain colored', category: 'DevOps' },

@@ -36,7 +36,7 @@ const Footer = () => {
     <footer className="bg-gray-900 w-full py-12 px-4 flex flex-col items-center justify-center relative overflow-hidden">
       {/* Decorative Footer Image */}
       <img 
-        src="/assets/images/footer.png" 
+        src="assets/images/footer.png" 
         alt="Footer Decoration" 
         className="hidden md:block absolute right-0 top-0 h-full object-contain opacity-30 pointer-events-none select-none z-0"
         style={{ maxWidth: '60%', minWidth: '300px' }}

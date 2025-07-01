@@ -32,49 +32,49 @@ const projects = [
   {
     title: 'WhaleX-Casino',
     description: 'A full-stack online casino platform built with TypeScript, featuring real-time gaming and basic user interface. Includes client-side React interface and server-side API with database integration for game state management.',
-    image: '/assets/images/ecasino.png',
+    image: 'assets/images/ecasino.png',
     tech: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Real-time'],
     repo: 'https://github.com/ronankian/WhaleX-Casino',
   },
   {
     title: 'EventHub',
     description: 'A comprehensive campus event management system built with PHP, featuring event registration, user management, and administrative dashboard. Includes database-driven functionality for organizing and tracking campus events with role-based access control.',
-    image: '/assets/images/ems.png',
+    image: 'assets/images/ems.png',
     tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'Bootstrap'],
     repo: 'https://github.com/ronankian/campus_ems',
   },
   {
     title: 'To-do',
     description: 'A dynamic To-Do web application built with Node.js and Express, featuring task creation, completion tracking, and MySQL database persistence. Includes responsive design with CRUD functionality for efficient task management.',
-    image: '/assets/images/todo.png',
+    image: 'assets/images/todo.png',
     tech: ['Node.js', 'Express', 'MySQL', 'HTML5', 'CSS3'],
     repo: 'https://github.com/ronankian/To-do',
   },
   {
     title: 'Color-Switch',
     description: 'A Flutter mobile game inspired by Color Switch, built with the Flame game engine. Features dynamic color-matching gameplay, smooth animations, and cross-platform compatibility. Players navigate through obstacles by matching colors in this addictive arcade-style game.',
-    image: '/assets/images/colorswitch.png',
+    image: 'assets/images/colorswitch.png',
     tech: ['Flutter', 'Dart', 'Flame Engine', 'Android', 'Apple'],
     repo: 'https://github.com/ronankian/Color-Switch',
   },
   {
     title: 'GameVerse',
     description: 'A comprehensive gaming hub web application built with PHP, featuring a game store, detailed reviews, gaming updates, and user authentication. Includes search functionality, game galleries, and a forum system for gaming community interaction.',
-    image: '/assets/images/gameverse.png',
+    image: 'assets/images/gameverse.png',
     tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'Bootstrap'],
     repo: 'https://github.com/ronankian/GameVerse',
   },
   {
     title: 'Portfolio.v1',
     description: 'My first portfolio website built with HTML and Bootstrap, featuring a clean and simple design to showcase my early projects and skills. This foundational project demonstrates my initial web development journey and serves as a starting point for my portfolio evolution.',
-    image: '/assets/images/portfolio01.png',
+    image: 'assets/images/portfolio01.png',
     tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     repo: 'https://github.com/ronankian/Portfolio.v1',
   },
   {
     title: 'Portfolio.v2',
     description: 'My latest portfolio website built with React and TypeScript, featuring modern animations, responsive design, and interactive components. Includes smooth scrolling, dynamic content, and a professional dark theme with Tailwind CSS styling.',
-    image: '/assets/images/portfolio02.png',
+    image: 'assets/images/portfolio02.png',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
     repo: 'https://github.com/ronankian/Portfolio.v2',
   },
@@ -138,7 +138,7 @@ const Project = () => {
                     t === 'Flame Engine' ? (
                       <img
                         key={i}
-                        src="/assets/images/stacks/flame.png"
+                        src="assets/images/stacks/flame.png"
                         alt="Flame Engine"
                         title={t}
                         style={{ width: '24px', height: '24px', display: 'inline-block', verticalAlign: 'middle' }}

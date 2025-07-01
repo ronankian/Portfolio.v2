@@ -4,31 +4,31 @@ import AnimatedContent from './AnimatedContent';
 
 const certificates = [
   {
-    src: '/assets/images/certificates/Web Development Track.png',
+    src: 'assets/images/certificates/Web Development Track.png',
     caption: 'Web Development Track, 2025',
   },
   {
-    src: '/assets/images/certificates/Computer Engineering Tracks.png',
+    src: 'assets/images/certificates/Computer Engineering Tracks.png',
     caption: 'Computer Engineering Tracks, 2025',
   },
   {
-    src: '/assets/images/certificates/Introduction to Figma.jpg',
+    src: 'assets/images/certificates/Introduction to Figma.jpg',
     caption: 'Introduction to Figma, 2025',
   },
   {
-    src: '/assets/images/certificates/Data Analytics Essentials.jpg',
+    src: 'assets/images/certificates/Data Analytics Essentials.jpg',
     caption: 'Data Analytics Essentials, 2025',
   },
   {
-    src: '/assets/images/certificates/Introduction to Cybersecurity.jpg',
+    src: 'assets/images/certificates/Introduction to Cybersecurity.jpg',
     caption: 'Introduction to Cybersecurity, 2025',
   },
   {
-    src: '/assets/images/certificates/DICT4A WiTech-Batangas ADSE.jpg',
+    src: 'assets/images/certificates/DICT4A WiTech-Batangas ADSE.jpg',
     caption: 'DICT4A WiTech-Batangas ADSE, 2024',
   },
   {
-    src: '/assets/images/certificates/ICpEP Student Membership.jpg',
+    src: 'assets/images/certificates/ICpEP Student Membership.jpg',
     caption: 'ICpEP Student Membership, 2023',
   },
 ];
