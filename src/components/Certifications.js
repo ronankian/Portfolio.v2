@@ -4,11 +4,11 @@ import AnimatedContent from './AnimatedContent';
 
 const certificates = [
   {
-    src: 'assets/images/certificates/Web Development Track.png',
+    src: 'assets/images/certificates/Web Development Freelancing.png',
     caption: 'Web Development Freelancing, 2025',
   },
   {
-    src: 'assets/images/certificates/Computer Engineering Tracks.png',
+    src: 'assets/images/certificates/CpE Tracks and Certifications.png',
     caption: 'CpE Tracks and Certifications, 2025',
   },
   {
