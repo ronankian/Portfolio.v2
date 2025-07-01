@@ -5,11 +5,11 @@ import AnimatedContent from './AnimatedContent';
 const certificates = [
   {
     src: 'assets/images/certificates/Web Development Track.png',
-    caption: 'Web Development Track, 2025',
+    caption: 'Web Development Freelancing, 2025',
   },
   {
     src: 'assets/images/certificates/Computer Engineering Tracks.png',
-    caption: 'Computer Engineering Tracks, 2025',
+    caption: 'CpE Tracks and Certifications, 2025',
   },
   {
     src: 'assets/images/certificates/Introduction to Figma.jpg',
@@ -29,7 +29,7 @@ const certificates = [
   },
   {
     src: 'assets/images/certificates/ICpEP Student Membership.jpg',
-    caption: 'ICpEP Student Membership, 2023',
+    caption: 'ICpEP Student Membership, 2024',
   },
 ];
 
