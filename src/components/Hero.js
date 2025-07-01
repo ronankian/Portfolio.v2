@@ -196,7 +196,7 @@ const Hero = () => {
             </span>
             <div className="flex flex-col gap-3 w-fit">
               <a 
-                href="https://drive.google.com/file/d/1IJZvTRiaGyBKgFT21eDLVxuRxUTEEJ1t/view" 
+                href="https://drive.google.com/file/d/1Qz66AXQJLI1ERciNCrT3FMRgFvE9vK2J/view" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg flex items-center gap-2 w-auto"

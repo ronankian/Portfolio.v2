@@ -35,9 +35,14 @@ Beyond software, I have hands-on hardware experience. I can assemble and trouble
             <p className="text-justify">
               In the future, I see myself as a versatile developer who builds full-stack web applications and interactive games, while also applying practical hardware knowledge to solve real-world tech problems. I aspire to join a forward-thinking team where I can contribute both software and hardware solutions that improve lives and drive innovation.
             </p>
-            <button className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-sm transition-colors duration-300">
+            <a
+              href="https://drive.google.com/file/d/1Qz66AXQJLI1ERciNCrT3FMRgFvE9vK2J/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-sm transition-colors duration-300"
+            >
               View CV
-            </button>
+            </a>
           </div>
         </div>
       </div>
