@@ -36,7 +36,7 @@ Beyond software, I have hands-on hardware experience. I can assemble and trouble
               In the future, I see myself as a versatile developer who builds full-stack web applications and interactive games, while also applying practical hardware knowledge to solve real-world tech problems. I aspire to join a forward-thinking team where I can contribute both software and hardware solutions that improve lives and drive innovation.
             </p>
             <a
-              href="https://drive.google.com/file/d/1Qz66AXQJLI1ERciNCrT3FMRgFvE9vK2J/view"
+              href="https://drive.google.com/file/d/1aGn-0bi8Nt1xca_ssM3F1eagpwzfmvgp/view"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-sm transition-colors duration-300"
