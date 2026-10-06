@@ -64,7 +64,7 @@ const BlurText = ({
     <span
       ref={ref}
       className={className}
-      style={{ display: 'inline-flex' }}
+      style={{ display: 'inline-flex', maxWidth: '100%', flexWrap: 'nowrap' }}
     >
       {elements.map((segment, index) => {
         const spanDelay = (index * delay) / 1000;

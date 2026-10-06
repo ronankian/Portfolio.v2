@@ -31,12 +31,12 @@ const socialLinks = [
 ];
 
 const Footer = () => {
-  const currentYear = 2025;
+  const currentYear = 2026;
   return (
     <footer className="bg-gray-900 w-full py-12 px-4 flex flex-col items-center justify-center relative overflow-hidden">
       {/* Decorative Footer Image */}
       <img 
-        src="assets/images/footer.png" 
+        src={`${process.env.PUBLIC_URL}/assets/images/footer.png`} 
         alt="Footer Decoration" 
         className="hidden md:block absolute right-0 top-0 h-full object-contain opacity-30 pointer-events-none select-none z-0"
         style={{ maxWidth: '60%', minWidth: '300px' }}
@@ -55,7 +55,7 @@ const Footer = () => {
         <p className="text-gray-300 text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>All Rights Reserved.</p>
       </div>
       {/* Social Buttons */}
-      <div className="flex space-x-2 mb-2 z-10">
+      <div className="flex flex-wrap justify-center gap-2 mb-2 z-10 max-w-full px-2">
         {socialLinks.map((link) => (
           <a
             key={link.label}

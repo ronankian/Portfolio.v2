@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="text-white min-h-screen">
+    <div className="text-white min-h-screen w-full max-w-full overflow-x-hidden">
       <Navbar />
       <Hero />
       <Project />

@@ -1,34 +1,41 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import AnimatedContent from './AnimatedContent';
 
 const certificates = [
   {
-    src: 'assets/images/certificates/Web Development Freelancing.png',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/Advanced Photonics Technologies.jpg`,
+    caption: 'Advanced Photonics Technologies for Emerging ICT and Sensing, 2026',
+  },
+  {
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/Arduino Day Philippines.jpg`,
+    caption: 'Arduino Day Philippines, 2026',
+  },
+  {
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/Web Development Freelancing.png`,
     caption: 'Web Development Freelancing, 2025',
   },
   {
-    src: 'assets/images/certificates/CpE Tracks and Certifications.png',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/CpE Tracks and Certifications.png`,
     caption: 'CpE Tracks and Certifications, 2025',
   },
   {
-    src: 'assets/images/certificates/Introduction to Figma.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/Introduction to Figma.jpg`,
     caption: 'Introduction to Figma, 2025',
   },
   {
-    src: 'assets/images/certificates/Data Analytics Essentials.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/Data Analytics Essentials.jpg`,
     caption: 'Data Analytics Essentials, 2025',
   },
   {
-    src: 'assets/images/certificates/Introduction to Cybersecurity.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/Introduction to Cybersecurity.jpg`,
     caption: 'Introduction to Cybersecurity, 2025',
   },
   {
-    src: 'assets/images/certificates/DICT4A WiTech-Batangas ADSE.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/DICT4A WiTech-Batangas ADSE.jpg`,
     caption: 'DICT4A WiTech-Batangas ADSE, 2024',
   },
   {
-    src: 'assets/images/certificates/ICpEP Student Membership.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/images/certificates/ICpEP Student Membership.jpg`,
     caption: 'ICpEP Student Membership, 2024',
   },
 ];
@@ -53,10 +60,10 @@ const Certifications = () => {
   const rowInViews = [inView0, inView1, inView2];
 
   return (
-    <section id="certifications" className="py-20 bg-black">
+    <section id="certifications" className="py-20 bg-black w-full max-w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 break-words">
             Validating My Skills and Learning Journey
           </h2>
           <p className="text-gray-300 text-md max-w-2xl mx-auto mb-4">

@@ -6,7 +6,6 @@ import {
   useTexture,
   Environment,
   Lightformer,
-  OrbitControls,
 } from "@react-three/drei";
 import {
   BallCollider,
@@ -18,12 +17,10 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
-import { useSpring, a } from "@react-spring/three";
-
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-const cardGLB = "assets/images/card.glb";
-const lanyard = "assets/images/lanyard.png";
+const cardGLB = `${process.env.PUBLIC_URL}/assets/images/card.glb`;
+const lanyard = `${process.env.PUBLIC_URL}/assets/images/lanyard.png`;
 
 export default function Lanyard({
   position = [0, 0, 30],
@@ -32,13 +29,19 @@ export default function Lanyard({
   transparent = true,
 }) {
   return (
-    <div className="relative z-0 w-full h-full flex justify-center items-center border-4 rounded-xl border-solid border-white">
+    <div
+      className="relative z-0 w-full max-w-full h-full overflow-hidden flex justify-center items-center border-4 rounded-xl border-solid border-white"
+      style={{ touchAction: "none" }}
+    >
       <Canvas
         camera={{ position, fov }}
-        gl={{ alpha: transparent }}
-        onCreated={({ gl }) =>
-          gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
-        }
+        dpr={[1, 1.5]}
+        gl={{ alpha: transparent, antialias: true }}
+        style={{ touchAction: "none", width: "100%", height: "100%" }}
+        onCreated={({ gl }) => {
+          gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1);
+          gl.domElement.style.touchAction = "none";
+        }}
       >
         <ambientLight intensity={Math.PI} />
         <Physics gravity={gravity} timeStep={1 / 60}>
@@ -97,7 +100,7 @@ function Band({ animatedProps, maxSpeed = 50, minSpeed = 0 }) {
 
   const segmentProps = {
     type: "dynamic",
-    canSleep: true,
+    canSleep: false,
     colliders: false,
     angularDamping: 4,
     linearDamping: 4,
@@ -116,6 +119,18 @@ function Band({ animatedProps, maxSpeed = 50, minSpeed = 0 }) {
   );
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
+  const draggedRef = useRef(false);
+
+  const wakeBodies = () => {
+    [card, j1, j2, j3, fixed].forEach((ref) => ref.current?.wakeUp());
+  };
+
+  const endDrag = () => {
+    if (!draggedRef.current) return;
+    draggedRef.current = false;
+    drag(false);
+    wakeBodies();
+  };
 
   const [isSmall, setIsSmall] = useState(() => {
     if (typeof window !== "undefined") {
@@ -148,6 +163,20 @@ function Band({ animatedProps, maxSpeed = 50, minSpeed = 0 }) {
       };
     }
   }, [hovered, dragged]);
+
+  useEffect(() => {
+    const onEnd = () => endDrag();
+    window.addEventListener("pointerup", onEnd);
+    window.addEventListener("pointercancel", onEnd);
+    window.addEventListener("touchend", onEnd);
+    window.addEventListener("touchcancel", onEnd);
+    return () => {
+      window.removeEventListener("pointerup", onEnd);
+      window.removeEventListener("pointercancel", onEnd);
+      window.removeEventListener("touchend", onEnd);
+      window.removeEventListener("touchcancel", onEnd);
+    };
+  }, []);
 
   useFrame((state, delta) => {
     if (dragged && typeof dragged !== "boolean") {
@@ -217,16 +246,32 @@ function Band({ animatedProps, maxSpeed = 50, minSpeed = 0 }) {
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => {
-              e.target.releasePointerCapture(e.pointerId);
-              drag(false);
+              e.stopPropagation();
+              try {
+                e.target.releasePointerCapture(e.pointerId);
+              } catch (_) {
+                /* capture may already be gone on touch devices */
+              }
+              endDrag();
             }}
+            onPointerCancel={(e) => {
+              e.stopPropagation();
+              endDrag();
+            }}
+            onLostPointerCapture={() => endDrag()}
             onPointerDown={(e) => {
-              e.target.setPointerCapture(e.pointerId);
-              drag(
-                new THREE.Vector3()
-                  .copy(e.point)
-                  .sub(vec.copy(card.current.translation()))
-              );
+              e.stopPropagation();
+              try {
+                e.target.setPointerCapture(e.pointerId);
+              } catch (_) {
+                /* iOS / WebGL often cannot capture the pointer */
+              }
+              const offset = new THREE.Vector3()
+                .copy(e.point)
+                .sub(vec.copy(card.current.translation()));
+              draggedRef.current = true;
+              drag(offset);
+              wakeBodies();
             }}
           >
             <mesh geometry={nodes.card.geometry}>
@@ -258,4 +303,6 @@ function Band({ animatedProps, maxSpeed = 50, minSpeed = 0 }) {
       </mesh>
     </>
   );
-} 
+}
+
+useGLTF.preload(cardGLB); 
