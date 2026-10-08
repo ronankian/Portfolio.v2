@@ -32,12 +32,12 @@ const About = () => {
               In the future, I see myself as a versatile developer who builds full-stack web applications and interactive games, while also applying practical hardware knowledge to solve real-world tech problems. I aspire to join a forward-thinking team where I can contribute either software or hardware solutions that improve lives and drive innovation.
             </p>
             <a
-              href="https://drive.google.com/file/d/1T2esCj5JaqX8eUDjKTjHv1p_gcyvvC7P/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1BRUvxftUg1bF5GV8mSpVXiJYGxMjuSE1/view"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-sm transition-colors duration-300"
             >
-              View Resume
+              Download CV
             </a>
           </div>
         </div>

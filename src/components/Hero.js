@@ -323,7 +323,7 @@ const Hero = () => {
             </span>
             <div className="flex flex-col gap-2 sm:gap-3 w-fit">
               <a 
-                href="https://drive.google.com/file/d/1T2esCj5JaqX8eUDjKTjHv1p_gcyvvC7P/view?usp=drive_link" 
+                href="https://drive.google.com/file/d/1jM5Z_XwCoysM8TlUC0XoBLWu98JTpeAi/view" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base rounded-lg transition duration-300 ease-in-out sm:hover:scale-105 shadow-lg flex items-center gap-2 w-auto"
