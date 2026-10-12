@@ -79,7 +79,8 @@ const projects = [
     title: 'GameVerse',
     description: 'A comprehensive gaming hub web application built with PHP, featuring a game store, detailed reviews, gaming updates, and user authentication. Includes search functionality, game galleries, and a forum system for gaming community interaction.',
     image: `${process.env.PUBLIC_URL}/assets/images/gameverse.png`,
-    tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript', 'Bootstrap'],
+    tech: ['HTML/CSS', 'JavaScript', 'Bootstrap', 'Firebase', 'PHP'],
+    live: 'https://project-gameverse.web.app',
     repo: 'https://github.com/ronankian/GameVerse',
   },
   {
