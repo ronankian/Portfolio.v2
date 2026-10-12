@@ -72,6 +72,7 @@ const projects = [
     description: 'A Flutter mobile game inspired by Color Switch, built with the Flame game engine. Features dynamic color-matching gameplay, smooth animations, and cross-platform compatibility. Players navigate through obstacles by matching colors in this addictive arcade-style game.',
     image: `${process.env.PUBLIC_URL}/assets/images/colorswitch.png`,
     tech: ['Flutter', 'Dart', 'Flame Engine', 'Android', 'Apple'],
+    live: 'https://colorswitch-b5197.web.app/',
     repo: 'https://github.com/ronankian/Color-Switch',
   },
   {
